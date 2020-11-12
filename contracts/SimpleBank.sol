@@ -117,7 +117,7 @@ contract SimpleBank {
         // Let's first subtract the amount from the user balance
         balances[msg.sender] -= withdrawAmount;
         // Now let's log the event of transfer
-        emit logWithdrawal(msg.sender, withdrwalAmount, balances[msg.sender]);
+        emit LogWithdrawal(msg.sender, withdrawalAmount, balances[msg.sender]);
         // Now lets send the ether to the user
         return balances[msg.sender];
     }
